@@ -2,10 +2,23 @@
 @section('content')
 @can('country_create')
     <div style="margin-bottom: 10px;" class="row">
-        <div class="col-lg-12">
-            <a class="btn btn-success" href="{{ route("admin.countries.create") }}">
+        <div class="col-lg-6">
+            <a class="btn btn-success" href="{{ route('admin.countries.create') }}">
                 {{ trans('global.add') }} {{ trans('cruds.country.title_singular') }}
             </a>
+        </div>
+        <div class="col-lg-6">
+            <div class="btn-group float-right ml-2">
+                <button class="btn btn-primary btn-sm  mt-2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Settings
+                </button>
+                            
+            </div>
+            <div class="btn-group float-right">
+                <button class="btn btn-danger btn-sm  mt-2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Quick Action
+               </button>                
+            </div>
         </div>
     </div>
 @endcan
